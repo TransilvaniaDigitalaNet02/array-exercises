@@ -18,10 +18,12 @@
             int minValue = ArrayHelper.Min(array);
             Console.WriteLine($"Min={minValue}");
 
-            int[] sortedArray = ArrayHelper.SelectionSort(array, "asc");
-            ConsoleHelper.PrintArray("Sorted Array=", sortedArray);
-            ConsoleHelper.PrintArray("Array=", array);
+            int[] sortedArrayAsc = ArrayHelper.SelectionSort(array, SortOrder.Ascending);
+            int[] sortedArrayDesc = ArrayHelper.SelectionSort(array, SortOrder.Descending);
 
+            ConsoleHelper.PrintArray("Sorted Array (asc)=", sortedArrayAsc);
+            ConsoleHelper.PrintArray("Sorted Array (desc)=", sortedArrayDesc);
+            ConsoleHelper.PrintArray("Array=", array);
         }
     }
 }
